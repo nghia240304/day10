@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+:root {
+    --main-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(to bottom, #b0d5c0, #989ca0); */
+    background-image: url(a1.jpg);
+    background-size:cover;
+}
+
+.container {
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgb(85, 83, 83);
+    transition: 0.2s;
+    z-index: 100;
+}
+
+.container:hover {
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    transition: 0.2s;
+}
+
+form {
+    border-bottom: 1px solid #aaa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form input {
+    font-size: 20px;
+    width: 100%;
+    margin-right: 15px;
+    border: none;
+    outline: none;
+    font-weight: 1000;
+}
+
+input::placeholder {
+    font-weight: 1000;
+    color: rgb(92, 72, 72);
+}
+
+form button {
+    background: linear-gradient(to right, #e88a4c, #f0a56d);
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 4px rgb(240, 255, 240);
+}
+
+form button:hover {
+    background: linear-gradient(to right, #f0a56d, #f1d877);
+    transform: scale(1.05);
+    transition: 0.4s;
+    box-shadow: 0 0 8px rgb(0, 65, 0);
+}
+
+.todos {
+    list-style: none;
+}
+
+.todos li {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+    color: #e54747;
+    font-weight: 500;
+}
+
+.todos li span {
+    color: rgb(92, 72, 72);
+}
+
+.todos li i {
+    transition: 0.2s;
+}
+
+.todos li i:hover {
+    transition: 0.2s;
+    transform: scale(1.3);
+    color: #69064d;
+}
+
+li.completed {
+    color: #aaa;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.todos li span {
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media (max-width: 600px) {
+    .container {
+        margin: 0 15px;
+    }
+}
